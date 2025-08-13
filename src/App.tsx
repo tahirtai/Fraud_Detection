@@ -32,7 +32,7 @@ function App() {
             <Shield className="w-12 h-12 text-blue-600" />
           </div>
           <h1 className="text-3xl font-bold text-gray-900">Fraud Detection System</h1>
-          <p className="mt-2 text-gray-600">Enter transaction details to check for potential fraud</p>
+          <p className="mt-2 text-gray-600">Enter transaction details to check for potential fraud made by Tahir Tai</p>
         </div>
 
         {error && (
