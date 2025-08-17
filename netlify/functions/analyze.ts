@@ -1,4 +1,4 @@
-import { Handler } from "@netlify/functions";
+import type { Handler } from "@netlify/functions";
 
 // Types mirror your frontend
 type Transaction = {
@@ -57,7 +57,7 @@ export const handler: Handler = async (event) => {
 
     return {
       statusCode: 200,
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json" , "Access-Control-Allow-Origin": "*" },
       body: JSON.stringify(result),
     };
   } catch (e) {
