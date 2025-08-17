@@ -1,4 +1,4 @@
-import { Handler } from "@netlify/functions";
+import type { Handler } from "@netlify/functions";
 
 // Types mirror your frontend
 type Transaction = {
@@ -17,6 +17,28 @@ type FraudScore = {
 
 export const handler: Handler = async (event) => {
   try {
+    // Simple health and CORS handling to aid production debugging
+    if (event.httpMethod === "OPTIONS") {
+      return {
+        statusCode: 204,
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "POST, GET, OPTIONS",
+          "Access-Control-Allow-Headers": "Content-Type"
+        },
+        body: ""
+      };
+    }
+    if (event.httpMethod === "GET") {
+      return {
+        statusCode: 200,
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*"
+        },
+        body: JSON.stringify({ ok: true, message: "analyze up" })
+      };
+    }
     const tx: Transaction = event.body ? JSON.parse(event.body) : ({} as any);
 
     const flags: string[] = [];
@@ -57,7 +79,7 @@ export const handler: Handler = async (event) => {
 
     return {
       statusCode: 200,
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" },
       body: JSON.stringify(result),
     };
   } catch (e) {
