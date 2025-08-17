@@ -1,0 +1,10 @@
+[build]
+  command   = "npm run build"   # how to build your Vite app
+  publish   = "dist"            # where Vite puts the production files
+  functions = "netlify/functions"  # where our serverless API files live
+
+# Single-Page App fallback so refresh on routes works
+[[redirects]]
+  from = "/*"
+  to   = "/index.html"
+  status = 200
