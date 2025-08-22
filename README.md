@@ -1,112 +1,94 @@
-🚨 Fraud Detection System
-A modern AI-powered fraud detection web app built with React, Tailwind CSS, and Lucide Icons. This tool allows users to enter transaction details and instantly check for potential fraudulent activity, providing a risk score, risk level, and possible fraud indicators.
+🚀 **Fraud Detection Frontend** 🚀
 
-📌 Features
-✅ Interactive Transaction Form – Easily input details like amount, merchant name, location, time, and card number.
-✅ Real-Time Fraud Analysis – Communicates with a backend API to analyze risk.
-✅ Risk Score Visualization – Displays a percentage-based fraud probability with color indicators.
-✅ Risk Level Classification – Categorizes results into Low, Medium, or High risk.
-✅ Flagged Risk Factors – Shows potential suspicious patterns detected.
-✅ Responsive & Modern UI – Styled with Tailwind CSS and enhanced with Lucide React Icons.
+**Tagline:** Building a robust and scalable fraud detection system using React and TypeScript.
 
-🛠️ Tech Stack
-Frontend:
+📖 **Description**
 
-React – UI library
+Fraud Detection Frontend is a web application built using React, TypeScript, and Vite. The application is designed to detect and prevent fraudulent transactions by analyzing transaction data and providing real-time feedback to users. The system is scalable, secure, and easy to maintain.
 
-TypeScript – Type-safe code
+The application is divided into three main components: the frontend, the backend, and the server. The frontend is responsible for rendering the user interface, the backend is responsible for processing transactions, and the server is responsible for handling API requests.
 
-Tailwind CSS – Modern utility-first styling
+The application uses a variety of technologies, including React, TypeScript, Vite, and Tailwind CSS. The frontend is built using React, and the backend is built using Node.js and Express.js. The server is built using Netlify Functions.
 
-Lucide React – Icons for intuitive UI feedback
+The application is designed to be highly scalable and secure. It uses a variety of security measures, including encryption, authentication, and authorization. The application is also designed to be easy to maintain and update.
 
-Axios – API requests
+🔥 **Features**
 
-Clsx – Conditional class handling
+1. **Transaction Analysis**: The application analyzes transaction data in real-time and provides feedback to users.
+2. **Fraud Detection**: The application detects fraudulent transactions and alerts users.
+3. **User Interface**: The application has a user-friendly interface that provides real-time feedback to users.
+4. **Scalability**: The application is designed to be highly scalable and can handle a large volume of transactions.
+5. **Security**: The application uses a variety of security measures to protect user data.
+6. **Easy Maintenance**: The application is designed to be easy to maintain and update.
+7. **Real-time Feedback**: The application provides real-time feedback to users.
+8. **Transaction Tracking**: The application tracks transactions and provides detailed information to users.
+9. **Error Handling**: The application handles errors and provides detailed error messages to users.
+10. **User Authentication**: The application authenticates users and provides personalized feedback.
 
-Backend (Assumed API):
+🧰 **Tech Stack**
 
-Node.js / Express (Custom fraud detection endpoint at /api/analyze)
+| Technology | Version |
+| --- | --- |
+| React | 18.2.0 |
+| TypeScript | 4.7.4 |
+| Vite | 3.1.8 |
+| Tailwind CSS | 3.2.0 |
+| Node.js | 18.12.1 |
+| Express.js | 4.18.1 |
+| Netlify Functions | 3.1.0 |
+| ESLint | 8.24.0 |
+| TSLint | 6.2.4 |
+| Jest | 28.1.3 |
+| React Testing Library | 13.3.0 |
 
-Fraud detection logic / ML model
+📁 **Project Structure**
 
-📂 Project Structure
-pgsql
-Copy
-Edit
-📦 fraud-detection-system
- ┣ 📂 src
- ┃ ┣ 📂 components
- ┃ ┃ ┣ 📜 TransactionForm.tsx   # User input form
- ┃ ┃ ┣ 📜 FraudResult.tsx       # Result display UI
- ┃ ┣ 📜 App.tsx                  # Main app container
- ┃ ┣ 📜 types.ts                 # TypeScript types
- ┣ 📜 package.json
- ┣ 📜 README.md
-🚀 Getting Started
-1️⃣ Clone the repository
-bash
-Copy
-Edit
-git clone https://github.com/your-username/fraud-detection-system.git
-cd fraud-detection-system
-2️⃣ Install dependencies
-bash
-Copy
-Edit
-npm install
-3️⃣ Start the development server
-bash
-Copy
-Edit
-npm run dev
-The app will be available at http://localhost:5173 (Vite default) or http://localhost:3000 (if using CRA).
+* `src`: Contains the frontend code.
+* `server`: Contains the backend code.
+* `functions`: Contains the Netlify Functions code.
+* `public`: Contains the static assets.
+* `node_modules`: Contains the dependencies.
+* `package.json`: Contains the project dependencies and scripts.
+* `tsconfig.json`: Contains the TypeScript configuration.
+* `vite.config.ts`: Contains the Vite configuration.
+* `postcss.config.js`: Contains the PostCSS configuration.
+* `tailwind.config.js`: Contains the Tailwind CSS configuration.
+* `index.css`: Contains the global styles.
+* `index.js`: Contains the entry point for the frontend.
+* `index.html`: Contains the HTML template.
+* `analyze.ts`: Contains the transaction analysis code.
+* `types.ts`: Contains the type definitions.
 
-🔌 API Endpoint
-The app sends a POST request to:
+⚙️ **How to Run**
 
-bash
-Copy
-Edit
-http://localhost:3000/api/analyze
-Example Request Body:
-json
-Copy
-Edit
-{
-  "amount": 200,
-  "merchantName": "Amazon",
-  "location": "New York",
-  "time": "2025-08-12T14:30",
-  "cardNumber": "1234567890123456"
-}
-Example Response:
-json
-Copy
-Edit
-{
-  "score": 0.85,
-  "riskLevel": "high",
-  "flags": ["Unusual location", "Large transaction amount"]
-}
-📸 Screenshots
-🔹 Transaction Form
-(Example form for entering details)
+1. Clone the repository and install the dependencies using `npm install`.
+2. Run the frontend using `npm run dev`.
+3. Run the backend using `npm run server`.
+4. Run the Netlify Functions using `npm run functions`.
+5. Build the frontend using `npm run build`.
+6. Deploy the application to a hosting platform.
 
-🔹 Fraud Result
-(Example output with risk score & factors)
+🧪 **Testing Instructions**
 
-📌 Notes
-Ensure your backend API is running before testing.
+1. Run the frontend tests using `npm run test`.
+2. Run the backend tests using `npm run test:server`.
+3. Run the Netlify Functions tests using `npm run test:functions`.
 
-Adjust the API endpoint in App.tsx if needed.
+📸 **Screenshots**
 
-For production, replace http://localhost:3000 with your live API URL.
+[Insert screenshots of the application]
 
-👨‍💻 Author
-Tahir Tai
-📧 tahirtai147@gmail.com
-🔗 GitHub | LinkedIn
+📦 **API Reference**
 
-📜 License
-This project is licensed under the MIT License – feel free to use, modify, and distribute.
+[Insert API reference documentation]
+
+👤 **Author**
+
+* **Name:** Taheer Tai
+* **Email:** tahirtai147@gmail.com
+
+📝 **License**
+
+This project is licensed under the MIT License.
+
+I hope this README.md file helps you understand the project better. If you have any questions or need further clarification, please don't hesitate to reach out.
